@@ -21,6 +21,7 @@
 		FC3DB7442D9B4E47008390ED /* BigBangVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3DB7312D9B4E47008390ED /* BigBangVM.swift */; };
 		FC3DB7452D9B4E47008390ED /* BigBangModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3DB7372D9B4E47008390ED /* BigBangModel.swift */; };
 		FC3DB7462D9B4E47008390ED /* EpisodeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3DB7352D9B4E47008390ED /* EpisodeCard.swift */; };
+		FC3DB75D2D9B579C008390ED /* CompoKit in Frameworks */ = {isa = PBXBuildFile; productRef = FC3DB75C2D9B579C008390ED /* CompoKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC3DB75D2D9B579C008390ED /* CompoKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,6 +166,7 @@
 			);
 			name = BigBangTheory;
 			packageProductDependencies = (
+				FC3DB75C2D9B579C008390ED /* CompoKit */,
 			);
 			productName = BigBangTheory;
 			productReference = FC3DB7122D9B4DCD008390ED /* BigBangTheory.app */;
@@ -193,6 +196,9 @@
 			);
 			mainGroup = FC3DB7092D9B4DCD008390ED;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				FC3DB75B2D9B579C008390ED /* XCRemoteSwiftPackageReference "CompoKit-SMP25" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = FC3DB7132D9B4DCD008390ED /* Products */;
 			projectDirPath = "";
@@ -439,6 +445,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FC3DB75B2D9B579C008390ED /* XCRemoteSwiftPackageReference "CompoKit-SMP25" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/swiftyjony/CompoKit-SMP25.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FC3DB75C2D9B579C008390ED /* CompoKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FC3DB75B2D9B579C008390ED /* XCRemoteSwiftPackageReference "CompoKit-SMP25" */;
+			productName = CompoKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FC3DB70A2D9B4DCD008390ED /* Project object */;
 }

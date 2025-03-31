@@ -5,6 +5,7 @@
 //  Created by Jon Gonzalez on 31/3/25.
 //
 
+import CompoKit
 import Foundation
 
 protocol DataRepository: JSONLoader, Sendable {
@@ -28,21 +29,5 @@ extension DataRepository {
 struct Repository: DataRepository {
     func loadBigBangTheoryJSON() throws -> [BigBangModel] {
         try load(url: url, type: [BigBangModel].self, decoder: decoder)
-    }
-}
-
-
-// USAR COMPOKIT: SUBIR A GITHUB Y CREAR RELEASE PARA PODER AÑADIRLO AL PROYECTO
-protocol JSONLoader {}
-
-extension JSONLoader {
-    func load<T>(url: URL, type: T.Type, decoder: JSONDecoder = JSONDecoder()) throws -> T where T: Codable {
-        let data = try Data(contentsOf: url)
-        return try decoder.decode(type, from: data)
-    }
-
-    func save<T>(url: URL, data: T, encoder: JSONEncoder = JSONEncoder()) throws where T: Codable {
-        let jsonData = try encoder.encode(data)
-        try jsonData.write(to: url, options: [.atomic, .completeFileProtection])
     }
 }
