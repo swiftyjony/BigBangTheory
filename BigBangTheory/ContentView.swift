@@ -8,17 +8,39 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var vm = BigBangVM()
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            ScrollView {
+                ForEach(1..<13) { season in
+                    Section {
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            LazyHStack(spacing: 20) {
+                                ForEach(vm.getEpisodesAtSeason(season)) { episode in
+                                    EpisodeCard(episode: episode)
+                                }
+                            }
+                        }
+                    } header: {
+                        HStack {
+                            Text("Season \(season)")
+                                .font(.bbTitle)
+//                                .frame(maxWidth: .infinity, alignment: .leading)
+                            Spacer()
+                            Image("season\(season)")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(height: 50)
+                        }
+                    }
+                }
+            }
+            .safeAreaPadding()
         }
-        .padding()
     }
 }
 
 #Preview {
-    ContentView()
+    ContentView(vm: BigBangVM(repository: RepositoryTest()))
 }
