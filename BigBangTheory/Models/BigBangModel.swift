@@ -23,4 +23,8 @@ extension BigBangModel {
     var episodeInfo: String {
         "S\(season.formatted(.number.precision(.integerLength(2))))E\(number.formatted(.number.precision(.integerLength(2))))"
     }
+
+    var airdateString: String {
+        airdate.formatted(.dateTime.day(.twoDigits).month(.wide).year(.defaultDigits))
+    }
 }

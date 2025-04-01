@@ -8,39 +8,32 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var vm = BigBangVM()
+    @Environment(BigBangVM.self) private var vm
+    @Namespace private var namespace
 
     var body: some View {
+        @Bindable var vm = vm
         NavigationStack {
             ScrollView {
-                ForEach(1..<13) { season in
-                    Section {
-                        ScrollView(.horizontal, showsIndicators: false) {
-                            LazyHStack(spacing: 20) {
-                                ForEach(vm.getEpisodesAtSeason(season)) { episode in
-                                    EpisodeCard(episode: episode)
-                                }
-                            }
-                        }
-                    } header: {
-                        HStack {
-                            Text("Season \(season)")
-                                .font(.bbTitle)
-//                                .frame(maxWidth: .infinity, alignment: .leading)
-                            Spacer()
-                            Image("season\(season)")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(height: 50)
-                        }
+                LazyVStack {
+                    ForEach(1..<13) { season in
+                        SeasonView(season: season, namespace: namespace)
                     }
                 }
             }
             .safeAreaPadding()
+            .bigBangNavigation
+        }
+        .fullScreenCover(item: $vm.selectedEpisode) { episode in
+            EpisodeView(episode: episode, namespace: namespace)
+                .circleCloseButton {
+                    vm.selectedEpisode = nil
+                }
         }
     }
 }
 
 #Preview {
-    ContentView(vm: BigBangVM(repository: RepositoryTest()))
+    ContentView()
+        .environment(BigBangVM(repository: RepositoryTest()))
 }

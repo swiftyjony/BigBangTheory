@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC258FF42D9C5B14001BD28A /* SeasonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC258FF32D9C5B14001BD28A /* SeasonView.swift */; };
+		FC258FF62D9C5C4E001BD28A /* BigBangNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC258FF52D9C5C4E001BD28A /* BigBangNavigation.swift */; };
+		FC258FF82D9C60C0001BD28A /* EpisodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC258FF72D9C60C0001BD28A /* EpisodeView.swift */; };
+		FC258FFA2D9C672D001BD28A /* CircleCloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC258FF92D9C672D001BD28A /* CircleCloseButton.swift */; };
+		FC258FFC2D9C8573001BD28A /* OrientationVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC258FFB2D9C8573001BD28A /* OrientationVM.swift */; };
 		FC3DB7292D9B4DD9008390ED /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC3DB7232D9B4DD9008390ED /* Preview Assets.xcassets */; };
 		FC3DB72A2D9B4DD9008390ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC3DB7252D9B4DD9008390ED /* Assets.xcassets */; };
 		FC3DB72B2D9B4DD9008390ED /* BigBangTheoryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3DB7262D9B4DD9008390ED /* BigBangTheoryApp.swift */; };
@@ -25,6 +30,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FC258FF32D9C5B14001BD28A /* SeasonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonView.swift; sourceTree = "<group>"; };
+		FC258FF52D9C5C4E001BD28A /* BigBangNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigBangNavigation.swift; sourceTree = "<group>"; };
+		FC258FF72D9C60C0001BD28A /* EpisodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeView.swift; sourceTree = "<group>"; };
+		FC258FF92D9C672D001BD28A /* CircleCloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleCloseButton.swift; sourceTree = "<group>"; };
+		FC258FFB2D9C8573001BD28A /* OrientationVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrientationVM.swift; sourceTree = "<group>"; };
 		FC3DB7122D9B4DCD008390ED /* BigBangTheory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BigBangTheory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC3DB7232D9B4DD9008390ED /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FC3DB7252D9B4DD9008390ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -86,9 +96,10 @@
 			children = (
 				FC3DB7262D9B4DD9008390ED /* BigBangTheoryApp.swift */,
 				FC3DB7272D9B4DD9008390ED /* ContentView.swift */,
+				FC258FF72D9C60C0001BD28A /* EpisodeView.swift */,
+				FC3DB7362D9B4E47008390ED /* Components */,
 				FC3DB7322D9B4E47008390ED /* ViewModels */,
 				FC3DB7342D9B4E47008390ED /* Repositories */,
-				FC3DB7362D9B4E47008390ED /* Components */,
 				FC3DB7382D9B4E47008390ED /* Models */,
 				FC3DB73B2D9B4E47008390ED /* Extensions */,
 				FC3DB73E2D9B4E47008390ED /* Resources */,
@@ -103,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				FC3DB7312D9B4E47008390ED /* BigBangVM.swift */,
+				FC258FFB2D9C8573001BD28A /* OrientationVM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -119,6 +131,9 @@
 			isa = PBXGroup;
 			children = (
 				FC3DB7352D9B4E47008390ED /* EpisodeCard.swift */,
+				FC258FF32D9C5B14001BD28A /* SeasonView.swift */,
+				FC258FF52D9C5C4E001BD28A /* BigBangNavigation.swift */,
+				FC258FF92D9C672D001BD28A /* CircleCloseButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -233,11 +248,16 @@
 				FC3DB72C2D9B4DD9008390ED /* ContentView.swift in Sources */,
 				FC3DB7412D9B4E47008390ED /* Repository.swift in Sources */,
 				FC3DB7422D9B4E47008390ED /* SemiRoundedRectangle.swift in Sources */,
+				FC258FF82D9C60C0001BD28A /* EpisodeView.swift in Sources */,
 				FC3DB7432D9B4E47008390ED /* Fonts.swift in Sources */,
+				FC258FF42D9C5B14001BD28A /* SeasonView.swift in Sources */,
+				FC258FFC2D9C8573001BD28A /* OrientationVM.swift in Sources */,
 				FC3DB7442D9B4E47008390ED /* BigBangVM.swift in Sources */,
+				FC258FFA2D9C672D001BD28A /* CircleCloseButton.swift in Sources */,
 				FC3DB7452D9B4E47008390ED /* BigBangModel.swift in Sources */,
 				FC3DB7462D9B4E47008390ED /* EpisodeCard.swift in Sources */,
 				FC3DB7302D9B4E3A008390ED /* RepositoryTest.swift in Sources */,
+				FC258FF62D9C5C4E001BD28A /* BigBangNavigation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

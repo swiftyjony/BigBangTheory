@@ -13,6 +13,8 @@ final class BigBangVM {
 
     var episodes: [BigBangModel]
 
+    var selectedEpisode: BigBangModel?
+
     init(repository: DataRepository = Repository()) {
         self.repository = repository
         do {

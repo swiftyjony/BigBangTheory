@@ -27,3 +27,9 @@ extension BigBangModel {
                                    image: "12337",
                                    url: URL(string: "https://www.tvmaze.com/episodes/2992/the-big-bang-theory-4x17-the-toast-derivation")!)
 }
+
+extension ContentView {
+//    static ver preview: some View {
+//        
+//    }
+}
