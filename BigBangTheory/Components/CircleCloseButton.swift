@@ -23,7 +23,9 @@ fileprivate struct CircleCloseButton: ViewModifier {
                 .font(.title)
                 .foregroundStyle(.white.opacity(0.5))
                 .padding(.trailing)
+                #if os(iOS)
                 .hoverEffect(.highlight)
+                #endif
             }
     }
 }

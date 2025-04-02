@@ -22,18 +22,33 @@ struct ContentView: View {
                 }
             }
             .safeAreaPadding()
+            #if os(iOS)
             .bigBangNavigation
+            #endif
+            .navigationDestination(for: BigBangModel.self) { episode in
+                EpisodeView(episode: episode, namespace: namespace)
+            }
         }
+        #if os(iOS)
         .fullScreenCover(item: $vm.selectedEpisode) { episode in
             EpisodeView(episode: episode, namespace: namespace)
                 .circleCloseButton {
                     vm.selectedEpisode = nil
                 }
         }
+//        #elseif os(macOS)
+//        .sheet(item: $vm.selectedEpisode) { episode in
+//            EpisodeView(episode: episode, namespace: namespace)
+//                .circleCloseButton {
+//                    vm.selectedEpisode = nil
+//                }
+//        }
+        #endif
     }
 }
 
 #Preview {
     ContentView()
         .environment(BigBangVM(repository: RepositoryTest()))
+        .environment(OrientationVM())
 }

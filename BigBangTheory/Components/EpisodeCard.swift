@@ -20,7 +20,9 @@ struct EpisodeCard: View {
             .frame(width: isiPad ? 350 : 250,
                    height: isiPad ? 200 : 150)
             .clipShape(RoundedRectangle(cornerRadius: 10))
+        #if os(iOS)
             .shadow(color: .primary.opacity(0.4), radius: 5, x: 0, y: 5)
+        #endif
             .overlay(alignment: .bottom) {
                 VStack(alignment: .leading) {
                     Text(episode.name)
@@ -35,7 +37,7 @@ struct EpisodeCard: View {
 //                        .matchedGeometryEffect(id: "info\(episode.id)", in: namespace, isSource: true)
                 }
                 .multilineTextAlignment(.leading)
-                .foregroundStyle(.background)
+                .foregroundStyle(.white)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(10)
                 .background {
@@ -43,7 +45,9 @@ struct EpisodeCard: View {
                         .fill(Color.black.opacity(0.2))
                 }
             }
+        #if os(iOS) || os(macOS)
             .padding(.bottom)
+        #endif
     }
 }
 

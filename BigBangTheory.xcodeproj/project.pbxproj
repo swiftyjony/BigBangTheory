@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC066C932D9DAD0D00869E1A /* BBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC066C922D9DAD0D00869E1A /* BBModel.swift */; };
+		FC066C952D9DB46200869E1A /* BBModelPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC066C942D9DB46200869E1A /* BBModelPreview.swift */; };
 		FC258FF42D9C5B14001BD28A /* SeasonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC258FF32D9C5B14001BD28A /* SeasonView.swift */; };
 		FC258FF62D9C5C4E001BD28A /* BigBangNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC258FF52D9C5C4E001BD28A /* BigBangNavigation.swift */; };
 		FC258FF82D9C60C0001BD28A /* EpisodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC258FF72D9C60C0001BD28A /* EpisodeView.swift */; };
@@ -30,6 +32,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FC066C922D9DAD0D00869E1A /* BBModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBModel.swift; sourceTree = "<group>"; };
+		FC066C942D9DB46200869E1A /* BBModelPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBModelPreview.swift; sourceTree = "<group>"; };
 		FC258FF32D9C5B14001BD28A /* SeasonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonView.swift; sourceTree = "<group>"; };
 		FC258FF52D9C5C4E001BD28A /* BigBangNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigBangNavigation.swift; sourceTree = "<group>"; };
 		FC258FF72D9C60C0001BD28A /* EpisodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeView.swift; sourceTree = "<group>"; };
@@ -87,6 +91,7 @@
 				FC3DB7232D9B4DD9008390ED /* Preview Assets.xcassets */,
 				FC3DB72D2D9B4E3A008390ED /* BigBangTest.json */,
 				FC3DB72E2D9B4E3A008390ED /* RepositoryTest.swift */,
+				FC066C942D9DB46200869E1A /* BBModelPreview.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -142,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				FC3DB7372D9B4E47008390ED /* BigBangModel.swift */,
+				FC066C922D9DAD0D00869E1A /* BBModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -246,9 +252,11 @@
 			files = (
 				FC3DB72B2D9B4DD9008390ED /* BigBangTheoryApp.swift in Sources */,
 				FC3DB72C2D9B4DD9008390ED /* ContentView.swift in Sources */,
+				FC066C932D9DAD0D00869E1A /* BBModel.swift in Sources */,
 				FC3DB7412D9B4E47008390ED /* Repository.swift in Sources */,
 				FC3DB7422D9B4E47008390ED /* SemiRoundedRectangle.swift in Sources */,
 				FC258FF82D9C60C0001BD28A /* EpisodeView.swift in Sources */,
+				FC066C952D9DB46200869E1A /* BBModelPreview.swift in Sources */,
 				FC3DB7432D9B4E47008390ED /* Fonts.swift in Sources */,
 				FC258FF42D9C5B14001BD28A /* SeasonView.swift in Sources */,
 				FC258FFC2D9C8573001BD28A /* OrientationVM.swift in Sources */,
@@ -391,10 +399,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BigBangTheory/Preview Content\"";
-				DEVELOPMENT_TEAM = 5GJ4N5ZR45;
+				DEVELOPMENT_TEAM = X9R52LTKX6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BigBangTheory/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "The Big Bang Theory";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -407,9 +416,14 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jongonzalez.BigBangTheory;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = NO;
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 6.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,3,7";
 			};
 			name = Debug;
 		};
@@ -421,10 +435,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BigBangTheory/Preview Content\"";
-				DEVELOPMENT_TEAM = 5GJ4N5ZR45;
+				DEVELOPMENT_TEAM = X9R52LTKX6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BigBangTheory/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "The Big Bang Theory";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -437,9 +452,14 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jongonzalez.BigBangTheory;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = NO;
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 6.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,3,7";
 			};
 			name = Release;
 		};
